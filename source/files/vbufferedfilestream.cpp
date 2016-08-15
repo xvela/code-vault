@@ -65,6 +65,23 @@ void VBufferedFileStream::openReadWrite() {
     this->_throwIfOpenFailed("VBufferedFileStream::openReadWrite", mNode.getPath());
 }
 
+// TO DO
+// start
+void VBufferedFileStream::openReadWriteExclusive() {
+	/*
+	The semantics of ::fopen_s() and ::open_s() run counter to the normal desire
+	to open a file r/w and have it created if it doesn't exist. For example,
+	mode "r" does not create the file. Mode "w" does. So instead, we check for
+	existence first, and then open it exactly the way we intend.
+	*/
+
+	mFile = VFileSystem::fopen_s(mNode.getPath(), mNode.exists() ? "r+b" : "w+b");
+
+	this->_throwIfOpenFailed("VBufferedFileStream::openReadWrite", mNode.getPath());
+}
+
+// end
+
 void VBufferedFileStream::openWrite() {
     mFile = VFileSystem::fopen(mNode.getPath(), "wb");
 

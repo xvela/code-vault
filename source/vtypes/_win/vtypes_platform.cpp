@@ -105,6 +105,16 @@ FILE* VPlatformAPI::fopen(const VString& path, const char* mode) {
 	return ::_wfopen(VFSNode::denormalizePath(path).toUTF16().c_str(), VString(mode).toUTF16().c_str());
 }
 
+// TO DO
+// start
+// static
+FILE* VPlatformAPI::fopen_s(const VString& path, const char* mode) {
+	FILE *pFile = NULL;
+	errno_t error = ::_wfopen_s(&pFile, VFSNode::denormalizePath(path).toUTF16().c_str(), VString(mode).toUTF16().c_str());
+	return pFile;
+}
+// end
+
 // static
 int VPlatformAPI::mkdir(const VString& path, mode_t /*mode*/) {
     return ::_wmkdir(VFSNode::denormalizePath(path).toUTF16().c_str());

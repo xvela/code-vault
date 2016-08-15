@@ -230,6 +230,30 @@ FILE* VFileSystem::fopen(const VString& nativePath, const char* mode) {
     return f;
 }
 
+// TO DO
+// start
+// static
+FILE* VFileSystem::fopen_s(const VString& nativePath, const char* mode) {
+	if (nativePath.isEmpty())
+		return NULL;
+
+	FILE*   f = NULL;
+	bool    done = false;
+
+	while (!done) {
+		f = VPlatformAPI::fopen_s(nativePath, mode);
+
+		if ((f != NULL) || (errno != EINTR)) {
+			done = true;
+		}
+	}
+
+	_debugCheck(f != NULL);
+
+	return f;
+}
+// end
+
 // static
 int VFileSystem::fclose(FILE* f) {
     if (f == NULL)

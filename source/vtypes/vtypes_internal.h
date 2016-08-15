@@ -42,6 +42,10 @@ class VFileSystem {
         static int      close(int fd);                                                      ///< Calls POSIX close in a way that is safe even if a signal is caught inside the function.
 
         static FILE*    fopen(const VString& nativePath, const char* mode);                 ///< Calls POSIX fopen in a way that is safe even if a signal is caught inside the function.
+// TO DO
+// start
+		static FILE*    fopen_s(const VString& nativePath, const char* mode);               ///< Calls POSIX fopen in a way that is safe even if a signal is caught inside the function.
+// end
         static int      fclose(FILE* f);                                                    ///< Calls POSIX fclose in a way that is safe even if a signal is caught inside the function.
         static size_t   fread(void* buffer, size_t size, size_t numItems, FILE* f);         ///< Calls POSIX fread in a way that is safe even if a signal is caught inside the function.
         static size_t   fwrite(const void* buffer, size_t size, size_t numItems, FILE* f);  ///< Calls POSIX fwrite in a way that is safe even if a signal is caught inside the function.
@@ -67,6 +71,10 @@ class VPlatformAPI {
         static VString  getcwd();
         static int      open(const VString& path, int flags, mode_t mode);
         static FILE*    fopen(const VString& path, const char* mode);
+// TO DO
+//start
+		static FILE*    fopen_s(const VString& path, const char* mode);
+//end
         static int      mkdir(const VString& path, mode_t mode);
         static int      rmdir(const VString& path);
         static int      unlink(const VString& path);

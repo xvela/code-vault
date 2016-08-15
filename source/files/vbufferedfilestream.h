@@ -80,6 +80,16 @@ class VBufferedFileStream : public VAbstractFileStream {
         Throws a VException if it cannot be opened.
         */
         virtual void openReadWrite();
+
+// TO DO
+// start
+		/**
+		Opens the file exclusive read-write, creating the file if it does not exist.
+		Throws a VException if it cannot be opened.
+		*/
+		virtual void openReadWriteExclusive();
+// end
+
         /**
         Opens the file for writing, creating the file if it does not exist.
         Throws a VException if it cannot be opened.
