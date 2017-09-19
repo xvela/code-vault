@@ -187,7 +187,7 @@ bool VSettingsNode::getBoolean(const VString& path) const {
 
     this->throwNotFound("Boolean", path);
 
-    return false; // (will never reach this statement because of throw)
+	return false; // (will never reach this statement because of throw)
 }
 
 VString VSettingsNode::getString(const VString& path, const VString& defaultValue) const {
@@ -207,7 +207,7 @@ VString VSettingsNode::getString(const VString& path) const {
     else
         this->throwNotFound("String", path);
 
-    return VString::EMPTY(); // (will never reach this statement because of throw)
+   return VString::EMPTY(); // (will never reach this statement because of throw)
 }
 
 VDouble VSettingsNode::getDouble(const VString& path, VDouble defaultValue) const {

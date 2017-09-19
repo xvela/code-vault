@@ -230,7 +230,7 @@ FILE* VFileSystem::fopen(const VString& nativePath, const char* mode) {
     return f;
 }
 
-// TO DO
+// TO DO  - local vault changes
 // start
 // static
 FILE* VFileSystem::fopen_s(const VString& nativePath, const char* mode) {

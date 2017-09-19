@@ -81,7 +81,7 @@ class VBufferedFileStream : public VAbstractFileStream {
         */
         virtual void openReadWrite();
 
-// TO DO
+// TO DO - local vault change
 // start
 		/**
 		Opens the file exclusive read-write, creating the file if it does not exist.

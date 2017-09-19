@@ -291,7 +291,7 @@ void VFSNode::copyDirectory(const VFSNode& source, const VFSNode& dest, bool rec
     }
     
     VFSNodeCopyDirectoryCallback copyDirectoryCallback(dest, recursive);
-    source.iterate(copyDirectoryCallback);
+	source.iterate(copyDirectoryCallback);
 }
 
 VFSNode::VFSNode()

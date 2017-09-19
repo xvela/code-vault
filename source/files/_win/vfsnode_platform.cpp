@@ -299,7 +299,8 @@ void VFSNode::_platform_directoryIterate(VDirectoryIterationCallback& callback) 
         bool keepGoing = true;
 
         do {
-            VThread::yield(); // be nice if we're iterating over a huge directory
+// TO DO - local vault changes - removed this for performance reasons - could also put a counter on it, i.e. yield once every 2000 files.
+//          VThread::yield(); // be nice if we're iterating over a huge directory
 
             VString nodeName = data.cFileName; // assign VString from wide char string
 

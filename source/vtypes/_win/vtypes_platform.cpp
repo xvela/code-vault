@@ -105,7 +105,7 @@ FILE* VPlatformAPI::fopen(const VString& path, const char* mode) {
 	return ::_wfopen(VFSNode::denormalizePath(path).toUTF16().c_str(), VString(mode).toUTF16().c_str());
 }
 
-// TO DO
+// TO DO - local vault changes
 // start
 // static
 FILE* VPlatformAPI::fopen_s(const VString& path, const char* mode) {

@@ -65,7 +65,7 @@ void VBufferedFileStream::openReadWrite() {
     this->_throwIfOpenFailed("VBufferedFileStream::openReadWrite", mNode.getPath());
 }
 
-// TO DO
+// TO DO - local vault changes
 // start
 void VBufferedFileStream::openReadWriteExclusive() {
 	/*

@@ -62,7 +62,7 @@ operations provide logical results when using these infinity values.
 
 Strict Weak Ordering:
 Sorting functions require a strict weak ordering to be defined. This is implemented
-by the comparision operators. It is defined as follows:
+by the comparison operators. It is defined as follows:
   NEGATIVE_INFINITY < negative durations < ZERO < positive durations < POSITIVE_INFINITY < UNSPECIFIED
 */
 class VDuration {

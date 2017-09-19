@@ -42,7 +42,7 @@ class VFileSystem {
         static int      close(int fd);                                                      ///< Calls POSIX close in a way that is safe even if a signal is caught inside the function.
 
         static FILE*    fopen(const VString& nativePath, const char* mode);                 ///< Calls POSIX fopen in a way that is safe even if a signal is caught inside the function.
-// TO DO
+// TO DO - local vault change
 // start
 		static FILE*    fopen_s(const VString& nativePath, const char* mode);               ///< Calls POSIX fopen in a way that is safe even if a signal is caught inside the function.
 // end
@@ -71,7 +71,7 @@ class VPlatformAPI {
         static VString  getcwd();
         static int      open(const VString& path, int flags, mode_t mode);
         static FILE*    fopen(const VString& path, const char* mode);
-// TO DO
+// TO DO - local vault change
 //start
 		static FILE*    fopen_s(const VString& path, const char* mode);
 //end
